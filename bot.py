@@ -8,6 +8,7 @@ def run_discord_bot():
     client = discord.Client(intents=intents)
     all_url = "https://moon-phase.p.rapidapi.com/advanced"
 
+    # API keys
     headers = {
 	    "X-RapidAPI-Key": "217c706ddcmshde2e2c82feb0878p17922ejsn35ab177e0b18",
 	    "X-RapidAPI-Host": "moon-phase.p.rapidapi.com"
@@ -25,6 +26,7 @@ def run_discord_bot():
         if message.author == client.user:
             return
         
+        # If the users uses '!help' command
         if message.content == '!help':
             channel = message.channel
             emoji = all_data['moon']['emoji']
@@ -42,15 +44,18 @@ def run_discord_bot():
             # Add fields from the list
             for name, value in fields_list:
                 embed.add_field(name=name, value=value, inline=False)
-
+            
+            # Sends the embed message
             await channel.send(embed=embed)
 
+        # If the users uses '!moonphase' command
         elif message.content == '!moonphase':
             phase = all_data['moon']['phase_name']
             emoji = all_data['moon']['emoji']
             embed = discord.Embed(title=emoji + "  Moon Phase  " + emoji,description="Today's Moon Phase: "+f"**{phase}**",color=None)
             await message.channel.send(embed=embed)
 
+         # If the users uses '!newmoon' command
         elif message.content == '!newmoon':
             current = all_data['moon_phases']['new_moon']['current']
             next = all_data['moon_phases']['new_moon']['next']
@@ -58,6 +63,7 @@ def run_discord_bot():
             zodiac = all_data['moon']['zodiac_sign']
             new_moon_emoji = "\U0001F311"
 
+            # Removes the timestamp at the end of the date
             formatted_datestamp1 = current['datestamp'][:-15]
             formatted_datestamp2 = next['datestamp'][:-15]
 
@@ -82,6 +88,7 @@ def run_discord_bot():
                     embed.add_field(name=name, value=value, inline=False)
                 await message.channel.send(embed=embed)
 
+        # If the users uses '!fullmoon' command
         elif message.content == '!fullmoon':
             current = all_data['moon_phases']['full_moon']['current']
             next = all_data['moon_phases']['full_moon']['next']
@@ -89,6 +96,7 @@ def run_discord_bot():
             zodiac = all_data['moon']['zodiac_sign']
             full_moon_emoji = "\U0001F315"
 
+            # Removes the timestamp at the end of the date
             formatted_datestamp1 = current['datestamp'][:-15]
             formatted_datestamp2 = next['datestamp'][:-15]
 
