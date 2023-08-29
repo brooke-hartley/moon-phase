@@ -9,5 +9,5 @@ The Moon Phase Discord Bot is a simple Python bot that provides information abou
 * !fullmoon: Get the date of the next full moon.
 
 **Usage**
-Type !help in a Discord server to see a list of available commands and their descriptions.
-Use the !moonphase, !newmoon, and !fullmoon commands to get information about the moon phases.
+* Type !help in a Discord server to see a list of available commands and their descriptions.
+* Use the !moonphase, !newmoon, and !fullmoon commands to get information about the moon phases.
