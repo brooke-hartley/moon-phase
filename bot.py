@@ -2,7 +2,7 @@ import discord
 import requests
 
 def run_discord_bot():
-    TOKEN = 'MTEzNDE1MzEwODM1Njg1NzkxNg.G6LUbf.mb2adhHn_w53UCGVU9133Y4zfNbPw6HoRUpzXo'
+    TOKEN = 'MTEzNDE1MzEwODM1Njg1NzkxNg.G9uklV.pH2qgXuuHqk1uXf5_zhcJOv_IaIE54gRcKGgTM'
     intents = discord.Intents.default()
     intents.message_content = True
     client = discord.Client(intents=intents)
