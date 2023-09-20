@@ -13,7 +13,8 @@ The Moon Phase Discord Bot is a simple Python bot that provides information abou
 * Use the !moonphase, !newmoon, and !fullmoon commands to get information about the moon phases.
 
 <a href="https://giphy.com/gifs/qJxxuX7LOT9fQfSz72">
-    <img src="https://i.ytimg.com/vi/Hc79sDi3f0U/maxresdefault.jpg" width="50%" alt="Now in Android: 55">
+    <img src="https://media.giphy.com/media/qJxxuX7LOT9fQfSz72/giphy.gif" width="50%" alt="GIF Description">
 </a>
+
 
 
